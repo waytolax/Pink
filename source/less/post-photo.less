@@ -1,0 +1,99 @@
+.post-photo {
+	&__promo {
+		margin: 25px 30px 42px 25px;
+		color: #283645;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 30px;
+		text-align: center;
+	}
+}
+
+.add-edit {
+	background-color: #f2f2f2;
+	padding: 20px 22px 30px 18px;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__list {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 20px 65px;
+		margin: 40px 0;
+		border-bottom: 1px solid #dddfe0;
+	}
+
+	&__label {
+		cursor: pointer;
+		opacity: 0.3;
+	}
+
+	&__item--active &__label {
+		opacity: 1;
+		fill: #d22856;
+	}
+
+	&__item:not(.add-edit__item--active) &__label:hover {
+		opacity: 0.6;
+	}
+
+	&__input {
+		display: none;
+		position: absolute;
+		bottom: 25px;
+		.pos-center();
+	}
+
+	&__item--active &__input {
+		display: block;
+	}
+
+	&__btn-block {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__btn {
+		margin-bottom: 10px;
+		padding: 16px;
+		border: 3px solid #d22856;
+		border-radius: 30px;
+		background-color: #f2f2f2;
+		color: #d22856;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18px;
+		cursor: pointer;
+	}
+
+	&__btn--cancel {
+		border-color: rgba(0, 0, 0, 0.1);
+		color: rgba(0, 0, 0, 0.1);
+	}
+
+	&__btn:hover {
+		color: #ffffff;
+		background-color: #d22856;
+	}
+
+	&__btn:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
+
+	&__btn--cancel:hover {
+		background-color: transparent;
+		color: rgba(0, 0, 0, 0.3);
+		border-color: rgba(0, 0, 0, 0.3);
+	}
+
+	&__btn--cancel:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: rgba(0, 0, 0, 0.3);
+		border-color: transparent;
+	}
+}

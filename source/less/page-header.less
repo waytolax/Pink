@@ -1,0 +1,145 @@
+.page-header {
+    position: relative; // desktop & tablet
+    background-color: #283645;
+
+    &__logo-btn {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 20px 13px 20px 20px;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    &__logo {
+        fill: #fff;
+        margin-right: 80px;
+    }
+
+    &__logo:hover {
+        fill: #d22856;
+    }
+
+    &__logo:active {
+        fill: #fff;
+        opacity: 0.5;
+    }
+
+    &__logo--tablet {
+        display: none;
+    }
+
+    &__logo--desktop {
+        display: none;
+    }
+
+    &__toggler {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        fill: #fff;
+    }
+
+    &__background {
+        position: relative;
+        min-height: 460px;
+        background-image: url("../img/mobile/iphone-hand-mobile@1x.png"), url("../img/mobile/bg-back-mobile@1x.jpg");
+        background-position: left 180px,center 0;
+        background-size: auto 280px,320px auto;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    &__background.webp {
+        background-image: url("../img/mobile/iphone-hand-mobile@1x.webp"), url("../img/mobile/bg-back-mobile@1x.webp");
+        background-position: left 180px,center 0;
+        background-size: auto 280px,320px auto;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .form-page &__background,
+    .photo-page &__background {
+        min-height: 240px;
+        background-image: url("../img/mobile/bg-back-mobile@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: 320px auto;
+    }
+
+    .form-page &__background.webp,
+    .photo-page &__background.webp {
+        background-image: url("../img/mobile/bg-back-mobile@1x.webp");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: 320px auto;
+    }
+
+    .form-page &__background::before,
+    .photo-page &__background::before {
+        content: "Фотографии пользователей";
+        position: absolute;
+        top: 100px;
+        .pos-center();
+        min-width: 170px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .form-page &__background::before {
+        content: "Конкурс на самое безбашенное путешествие с Пинк";
+        min-width: 230px;
+    }
+
+    &__logo-btn--no-js button,
+    &__logo-btn--opened &__toggler-svg--burger,
+    &__toggler-svg--cross {
+        display: none;
+    }
+
+    &__logo-btn--no-js + .main-nav,
+    &__logo-btn--opened &__toggler-svg--cross {
+        display: block;
+    }
+
+    &__logo-btn--no-js,
+    &__logo-btn--opened {
+        position: static;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.99);
+        background-color: #283645;
+    }
+
+    &__logo-btn--no-js ~ &__background,
+    &__logo-btn--opened ~ &__background {
+        background-position: left 110px,center -70px;
+        min-height: 394px;
+    }
+
+    .form-page &__logo-btn--no-js ~ &__background,
+    .form-page &__logo-btn--opened ~ &__background,
+    .photo-page &__logo-btn--no-js ~ &__background,
+    .photo-page &__logo-btn--opened ~ &__background {
+        background-position: center -70px;
+        min-height: 170px;
+    }
+
+    .form-page &__logo-btn--no-js ~ &__background::before,
+    .form-page &__logo-btn--opened ~ &__background::before,
+    .photo-page &__logo-btn--no-js ~ &__background::before,
+    .photo-page &__logo-btn--opened ~ &__background::before {
+        top: 32px;
+    }
+
+    &__toggler-svg--burger:hover,
+    &__toggler-svg--cross:hover {
+        fill: #d22856;
+    }
+
+    &__toggler-svg--burger:active,
+    &__toggler-svg--cross:active {
+        opacity: 0.5;
+    }
+}

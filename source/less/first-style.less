@@ -1,0 +1,552 @@
+@import './normalize.less';
+@import './fonts.less';
+
+body {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.main-page {
+    background-color: #f2f2f2;
+}
+
+.main-page .page-footer {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.page-header {
+    position: relative; // desktop & tablet
+    background-color: #283645;
+
+    &__logo-btn {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 20px 13px 20px 20px;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    &__logo {
+        fill: #fff;
+        margin-right: 80px;
+    }
+
+    &__logo:hover {
+        fill: #d22856;
+    }
+
+    &__logo:active {
+        fill: #fff;
+        opacity: 0.5;
+    }
+
+    &__logo--tablet {
+        display: none;
+    }
+
+    &__logo--desktop {
+        display: none;
+    }
+
+    &__toggler {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        fill: #fff;
+    }
+
+    &__background {
+        position: relative;
+        min-height: 460px;
+        background-image: url("../img/mobile/iphone-hand-mobile@1x.png"), url("../img/mobile/bg-back-mobile@1x.jpg");
+        background-position: left 180px,center 0;
+        background-size: auto 280px,320px auto;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    &__background.webp {
+        background-image: url("../img/mobile/iphone-hand-mobile@1x.webp"), url("../img/mobile/bg-back-mobile@1x.webp");
+        background-position: left 180px,center 0;
+        background-size: auto 280px,320px auto;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .form-page &__background,
+    .photo-page &__background {
+        min-height: 240px;
+        background-image: url("../img/mobile/bg-back-mobile@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: 320px auto;
+    }
+
+    .form-page &__background.webp,
+    .photo-page &__background.webp {
+        background-image: url("../img/mobile/bg-back-mobile@1x.webp");
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: 320px auto;
+    }
+
+    .form-page &__background::before,
+    .photo-page &__background::before {
+        content: "Фотографии пользователей";
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 170px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .form-page &__background::before {
+        content: "Конкурс на самое безбашенное путешествие с Пинк";
+        min-width: 230px;
+    }
+
+    &__logo-btn--no-js button,
+    &__logo-btn--opened &__toggler-svg--burger,
+    &__toggler-svg--cross {
+        display: none;
+    }
+
+    &__logo-btn--no-js + .main-nav,
+    &__logo-btn--opened &__toggler-svg--cross {
+        display: block;
+    }
+
+    &__logo-btn--no-js,
+    &__logo-btn--opened {
+        position: static;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.99);
+        background-color: #283645;
+    }
+
+    &__logo-btn--no-js ~ &__background,
+    &__logo-btn--opened ~ &__background {
+        background-position: left 110px,center -70px;
+        min-height: 394px;
+    }
+
+    .form-page &__logo-btn--no-js ~ &__background,
+    .form-page &__logo-btn--opened ~ &__background,
+    .photo-page &__logo-btn--no-js ~ &__background,
+    .photo-page &__logo-btn--opened ~ &__background {
+        background-position: center -70px;
+        min-height: 170px;
+    }
+
+    .form-page &__logo-btn--no-js ~ &__background::before,
+    .form-page &__logo-btn--opened ~ &__background::before,
+    .photo-page &__logo-btn--no-js ~ &__background::before,
+    .photo-page &__logo-btn--opened ~ &__background::before {
+        top: 32px;
+    }
+
+    &__toggler-svg--burger:hover,
+    &__toggler-svg--cross:hover {
+        fill: #d22856;
+    }
+
+    &__toggler-svg--burger:active,
+    &__toggler-svg--cross:active {
+        opacity: 0.5;
+    }
+}
+
+.main-nav {
+    display: none;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        padding: 15px 5px;
+        border-top: 1px solid rgba(72, 84, 97, 0.99);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.99);
+        background-color: #283645;
+        text-align: center;
+        font-weight: 700;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        position: relative;
+        color: #ffffff;
+    }
+
+    &--opened {
+        display: block;
+    }
+
+    &__link:not(.main-nav__link--active):hover {
+        color: #d22856;
+    }
+
+    &__link:not(.main-nav__link--active):active {
+        color: #d22856;
+        opacity: 0.5;
+    }
+
+    &__link--active {
+        border-bottom: 2px solid #fff;
+    }
+}
+
+.app-download {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d2631;
+
+    &__slogan {
+        display: none;
+        padding: 0 50px;
+        margin: 0;
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__button {
+        padding: 15px 20px;
+        margin: 30px 20px 18px;
+        border: 3px solid #fff;
+        border-radius: 35px;
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    &__button:hover {
+        background-color: #fff;
+        color: #d22856;
+    }
+
+    &__button:active {
+        color: rgba(210, 40, 86, 0.3);
+    }
+
+    &__info {
+        margin: 10px 16px 30px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 40px;
+    align-items: baseline;
+
+    &__item {
+        margin: 10px auto;
+    }
+
+    &__item:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+}
+// retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-header__background {
+        background-image: url("../img/mobile/iphone-hand-mobile@2x.png"), url("../img/mobile/bg-back-mobile@2x.jpg");
+        background-size: auto 288px, auto 462px;
+    }
+
+    .form-page .page-header__background,
+    .photo-page .page-header__background {
+        background-image: url("../img/mobile/bg-back-mobile@2x.jpg");
+        background-size: auto 462px;
+    }
+}
+// Webp retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-header__background.webp {
+        background-image: url("../img/mobile/iphone-hand-mobile@2x.webp"), url("../img/mobile/bg-back-mobile@2x.webp");
+        background-size: auto 288px, auto 462px;
+    }
+
+    .form-page .page-header__background.webp,
+    .photo-page .page-header__background.webp {
+        background-image: url("../img/mobile/bg-back-mobile@2x.webp");
+        background-size: auto 462px;
+    }
+}
+@media (min-width: 660px) {
+    .page-header {
+        &__logo--mobile {
+            display: none;
+        }
+
+        &__logo--tablet {
+            display: block;
+        }
+
+        &__logo-btn {
+            padding-top: 27px;
+            padding-bottom: 41px;
+        }
+
+        &__background {
+            min-height: 709px;
+            background-image: url("../img/tablet/iphone-hand-tablet@1x.png"), url("../img/tablet/bg-back-tablet@1x.jpg");
+            background-size: auto 545px, auto 729px;
+            background-position: center 164px, center -20px;
+        }
+
+        &__background.webp {
+            background-image: url("../img/tablet/iphone-hand-tablet@1x.webp"),url("../img/tablet/bg-back-tablet@1x.webp");
+            background-size: auto 545px, auto 729px;
+            background-position: center 164px, center -20px;
+        }
+
+        .form-page &__background,
+        .photo-page &__background {
+            min-height: 440px;
+            background-image: url("../img/tablet/bg-back-tablet@1x.jpg");
+            background-size: auto 729px;
+        }
+
+        .form-page &__background.webp,
+        .photo-page &__background.webp {
+            background-image: url("../img/tablet/bg-back-tablet@1x.webp");
+            background-size: auto 729px;
+        }
+
+        .form-page &__background::before,
+        .photo-page &__background::before {
+            top: 178px;
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        .form-page &__background::before {
+            min-width: 500px;
+        }
+
+        &__logo-btn--no-js ~ &__background,
+        &__logo-btn--opened ~ &__background {
+            background-position: center 75px,center -110px;
+            min-height: 618px;
+        }
+
+        .form-page &__logo-btn--no-js ~ &__background,
+        .form-page &__logo-btn--opened ~ &__background,
+        .photo-page &__logo-btn--no-js ~ &__background,
+        .photo-page &__logo-btn--opened ~ &__background {
+            background-position: center -110px;
+            min-height: 330px;
+        }
+
+        .form-page &__logo-btn--no-js ~ &__background::before,
+        .form-page &__logo-btn--opened ~ &__background::before,
+        .photo-page &__logo-btn--no-js ~ &__background::before,
+        .photo-page &__logo-btn--opened ~ &__background::before {
+            top: 68px;
+        }
+    }
+
+    .app-download {
+        position: absolute;
+        bottom: 95px;
+        background-color: transparent;
+        width: 340px;
+
+        &__slogan {
+            display: block;
+        }
+
+        &__button {
+            margin-bottom: 38px;
+        }
+
+        &__info {
+            font-size: 18px;
+            margin-top: 22px;
+            margin-bottom: 17px;
+        }
+    }
+
+    .icon-list {
+        margin: 0 50px;
+    }
+}
+// retina 660px
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
+    .page-header__background {
+        background-image: url("../img/tablet/iphone-hand-tablet@2x.png"), url("../img/tablet/bg-back-tablet@2x.jpg");
+    }
+
+    .form-page .page-header__background,
+    .photo-page .page-header__background {
+        background-image: url("../img/tablet/bg-back-tablet@2x.jpg");
+    }
+}
+// Webp 660px
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
+    .page-header__background.webp {
+        background-image: url("../img/tablet/iphone-hand-tablet@2x.webp"), url("../img/tablet/bg-back-tablet@2x.webp");
+    }
+
+    .form-page .page-header__background.webp,
+    .photo-page .page-header__background.webp {
+        background-image: url("../img/tablet/bg-back-tablet@2x.webp");
+    }
+}
+@media (min-width: 960px) {
+    .page-header {
+        &__logo--mobile,
+        &__logo--tablet,
+        &__logo-btn {
+            display: none;
+        }
+
+        &__logo--desktop {
+            display: block;
+        }
+
+        &__background {
+            min-height: 853px;
+            background-image: url("../img/desktop/iphone-hand-desktop@1x.png"), url("../img/desktop/bg-back-desktop@1x.jpg");
+            background-size: auto 645px, cover;
+            background-position: right bottom, center;
+        }
+
+        &__background.webp {
+            background-image: url("../img/desktop/iphone-hand-desktop@1x.webp"), url("../img/desktop/bg-back-desktop@1x.webp");
+            background-size: auto 645px, cover;
+            background-position: right bottom, center;
+        }
+
+        .form-page &__background,
+        .photo-page &__background {
+            min-height: 394px;
+            background-image: url("../img/desktop/bg-back-desktop@1x.jpg");
+            background-size: auto 853px;
+        }
+
+        .form-page &__background.webp,
+        .photo-page &__background.webp {
+            background-image: url("../img/desktop/bg-back-desktop@1x.webp");
+            background-size: auto 853px;
+        }
+
+        .form-page &__background::before,
+        .photo-page &__background::before {
+            top: 172px;
+        }
+
+        .form-page &__background::before {
+            min-width: 750px;
+        }
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 26px 10.9% 43px;
+        background-color: rgba(0,0,0,0.3);
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-basis: 620px;
+            padding-bottom: 3px;
+        }
+
+        &__item {
+            background: none;
+            border: none;
+            text-transform: none;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            padding: 0;
+        }
+    }
+
+    .app-download {
+        left: 110px;
+        top: 218px;
+
+        &__slogan {
+            font-size: 50px;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            font-size: 18px;
+            margin-top: 40px;
+        }
+
+        &__button {
+            font-size: 21px;
+            margin-bottom: 60px;
+        }
+    }
+}
+// retina 960px
+@media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
+    .page-header__background {
+        background-image: url("../img/desktop/iphone-hand-desktop@2x.png"), url("../img/desktop/bg-back-desktop@2x.jpg");
+    }
+
+    .form-page .page-header__background,
+    .photo-page .page-header__background {
+        background-image: url("../img/desktop/bg-back-desktop@2x.jpg");
+    }
+}
+// Webp 960px
+@media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 960px) and (min-resolution: 1.5dppx) {
+    .page-header__background.webp {
+        background-image: url("../img/desktop/iphone-hand-desktop@2x.webp"), url("../img/desktop/bg-back-desktop@2x.webp");
+    }
+
+    .form-page .page-header__background.webp,
+    .photo-page .page-header__background.webp {
+        background-image: url("../img/desktop/bg-back-desktop@2x.webp");
+    }
+}

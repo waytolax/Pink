@@ -1,0 +1,476 @@
+@media (min-width: 960px) {
+	.advs {
+		&::before {
+			display: none;
+		}
+
+		&__header {
+			padding: 65px 12% 90px;
+			font-size: 50px;
+			line-height: 60px;
+		}
+
+		&__list {
+			flex-direction: row;
+			width: auto;
+			justify-content: space-between;
+			text-align: center;
+			padding: 345px 13.3% 50px;
+		}
+
+		&__item {
+			position: relative;
+			flex-basis: 240px;
+			margin: 0;
+		}
+
+		&__item::before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: -357px;
+			.pos-center();
+			min-width: 186px;
+			min-height: 301px;
+			background-position: center;
+		}
+
+		&__item:nth-child(1)::before {
+			background-image: url("../img/desktop/iphone-screen-1-desktop@1x.png");
+		}
+
+		&__item:nth-child(2)::before {
+			background-image: url("../img/desktop/iphone-screen-2-desktop@1x.png");
+		}
+
+		&__item:nth-child(3)::before {
+			background-image: url("../img/desktop/iphone-screen-3-desktop@1x.png");
+		}
+
+		.webp &__item:nth-child(1)::before {
+			background-image: url("../img/desktop/iphone-screen-1-desktop@1x.webp");
+		}
+
+		.webp &__item:nth-child(2)::before {
+			background-image: url("../img/desktop/iphone-screen-2-desktop@1x.webp");
+		}
+
+		.webp &__item:nth-child(3)::before {
+			background-image: url("../img/desktop/iphone-screen-3-desktop@1x.webp");
+		}
+
+		&__title {
+			font-size: 30px;
+			line-height: 30px;
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 30px;
+			margin-top: 25px;
+		}
+	}
+
+	.research {
+		padding: 110px 85px 115px 495px;
+		background-color: #f2f2f2;
+		background-size: 298px auto;
+		background-position: 130px 15px;
+
+		&::before {
+			width: 253px;
+			height: 253px;
+			left: 152px;
+			top: 85px;
+			font-size: 120px;
+			border-width: 16px;
+		}
+
+		&__title {
+			line-height: 30px;
+			margin-bottom: 12px;
+		}
+
+		&__title br {
+			display: none;
+		}
+
+		&__text {
+			font-size: 18px;
+			margin-bottom: 35px;
+			line-height: 30px;
+		}
+
+		&__more {
+			font-size: 18px;
+		}
+	}
+
+	.reviews {
+		padding: 73px 220px 35px;
+
+		&__btn,
+		&__quotes {
+			display: block;
+		}
+
+		&__title {
+			font-size: 24px;
+		}
+
+		&__job {
+			font-size: 18px;
+		}
+
+		&__list {
+			flex-basis: 220px;
+			margin-top: 50px;
+		}
+	}
+
+	.reviews .controls {
+		display: none;
+	}
+
+	.price-list {
+		padding: 140px 0 95px;
+	}
+
+	.price-table {
+		min-height: 280px;
+
+		&__price {
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		&__hit::before {
+			left: -90px;
+			top: 20px;
+			font-size: 10px;
+			line-height: 21px;
+		}
+
+		tr td:first-child,
+		tr th:first-child {
+			padding: 15px 67px 15px 20px;
+		}
+
+		td {
+			font-size: 18px;
+			padding: 8px 15px;
+		}
+
+		th:not(:first-child) {
+			font-size: 18px;
+			line-height: 30px;
+			padding: 18px 66px 20px;
+		}
+	}
+
+	.contact-us {
+		padding: 65px 120px 20px;
+
+		&__slogan {
+			font-size: 50px;
+			line-height: 60px;
+			margin-bottom: 55px;
+		}
+
+		&__option,
+		&__option:last-child {
+			margin-bottom: 0;
+		}
+
+		&__option:nth-child(2) {
+			order: 1;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+
+	.map {
+		min-height: 500px;
+		background-image: url("../img/desktop/bg-map-desktop@1x.jpg");
+	}
+
+	.map.webp {
+		background-image: url("../img/desktop/bg-map-desktop@1x.webp");
+	}
+
+	.main-page .page-footer,
+	.page-footer {
+		padding: 70px 130px 75px;
+
+		&__logo {
+			margin-bottom: 0;
+			padding-bottom: 10px;
+		}
+	}
+
+	.photo-page .page-footer {
+		padding-top: 100px;
+	}
+
+	.social-list {
+		flex-basis: 190px;
+		margin-left: 20px;
+		margin-top: 5px;
+	}
+
+	.copyright__text {
+		margin-top: 3px;
+		font-size: 18px;
+	}
+
+	.copyright__link {
+		margin-top: 12px;
+	}
+}
+// ---------------    photo-page     --------------- //
+@media (min-width: 960px) {
+	.gallery {
+		&__promo {
+			width: 580px;
+			margin: 0 auto;
+			padding: 90px 55px;
+		}
+
+		&__item--best img {
+			height: 506px;
+		}
+
+		&__item--best::before {
+			top: 53px;
+			right: 130px;
+		}
+
+		&__item--best &__wrapper {
+			margin-left: 130px;
+			margin-right: 130px;
+		}
+
+		&__list {
+			padding-left: 130px;
+			padding-right: 130px;
+		}
+
+		&__item:not(.gallery__item--best) {
+			min-height: 555px;
+			margin-bottom: 55px;
+		}
+	}
+
+	.post-photo {
+		padding-left: 40px;
+		padding-right: 40px;
+
+		&__promo {
+			margin-top: 5px;
+			margin-bottom: 65px;
+		}
+	}
+
+	.add-edit {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 55px;
+
+		&__icon {
+			width: auto;
+			height: auto;
+			margin-right: 45px;
+		}
+
+		&__list {
+			margin-top: 0;
+		}
+
+		&__item {
+			min-width: 410px;
+			padding-bottom: 5px;
+			margin-bottom: 15px;
+		}
+
+		&__form {
+			flex-grow: 0;
+			margin-left: 88px;
+		}
+
+		&__label[for="edit-contrast"] {
+			margin-left: 5px;
+			margin-right: 8px;
+		}
+
+		&__btn-block {
+			display: flex;
+			flex-direction: row;
+			min-width: auto;
+			margin: auto 0 0;
+		}
+
+		&__btn {
+			flex-basis: 183px;
+			padding: 16px;
+			margin-bottom: 0;
+		}
+
+		&__btn:first-child {
+			margin-right: auto;
+		}
+	}
+}
+// ---------------   form-page    ------------- //
+@media (min-width: 960px) {
+	.review-section {
+		&__legend {
+			padding: 92px 215px 70px;
+		}
+
+		&__legend--desktop {
+			display: inline;
+		}
+	}
+
+	.form {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-left: 130px;
+		padding-right: 130px;
+
+		&__fieldset &__legend {
+			padding: 0 25px;
+		}
+
+		&__fieldset--info {
+			flex-basis: 335px;
+			margin: 15px auto 0 0;
+		}
+
+		&__fieldset&__fieldset--app {
+			padding: 50px 0;
+			box-sizing: border-box;
+			flex-basis: 335px;
+			height: 310px;
+			margin: 0;
+		}
+
+		&__fieldset--app label {
+			margin-left: 55px;
+		}
+
+		&__fieldset&__fieldset--contact {
+			flex-grow: 1;
+			margin: 0;
+			padding-top: 35px;
+		}
+
+		&__fieldset--contact &__inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__fieldset--contact-wrapper {
+			flex-basis: 375px;
+			margin-bottom: 5px;
+		}
+
+		&__fieldset&__fieldset--achieve {
+			flex-grow: 1;
+			margin: 60px 0 55px;
+			padding: 0;
+		}
+
+		&__fieldset--achieve &__inner {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 45px 10px 10px 58px;
+		}
+
+		&__fieldset--achieve label {
+			flex-basis: 200px;
+		}
+
+		&__fieldset&__fieldset--review {
+			width: 100%;
+			margin: 0;
+			padding-top: 35px;
+		}
+
+		&__fieldset--review textarea {
+			height: 125px;
+			padding: 15px;
+		}
+
+		&__button-wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-grow: 1;
+			align-items: baseline;
+		}
+
+		&__button {
+			margin: 65px 20px 0 0;
+		}
+
+		&__required {
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	.form-popup {
+		width: 80%;
+
+		&--success {
+			top: 1320px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.gallery {
+		&__item {
+			flex-grow: 0;
+		}
+
+		&__item:not(&__item--best):nth-of-type(2n+1) {
+			margin-right: 0;
+		}
+	}
+
+	.post-photo {
+		padding-left: 130px;
+		padding-right: 130px;
+	}
+
+	.add-edit {
+		padding-left: 80px;
+		padding-right: 80px;
+
+		&__photo {
+			flex-grow: 0;
+		}
+	}
+
+	.form {
+		&__fieldset--info {
+			flex-basis: 435px;
+			margin: 15px auto 0 0;
+		}
+
+		&__fieldset&__fieldset--app {
+			padding: 50px 0;
+			box-sizing: border-box;
+			flex-basis: 435px;
+			height: 310px;
+			margin: 0;
+		}
+
+		&__fieldset--app label {
+			margin-left: 75px;
+		}
+	}
+}

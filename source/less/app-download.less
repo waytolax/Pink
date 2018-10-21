@@ -1,0 +1,62 @@
+.app-download {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d2631;
+
+    &__slogan {
+        display: none;
+        padding: 0 50px;
+        margin: 0;
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__button {
+        padding: 15px 20px;
+        margin: 30px 20px 18px;
+        border: 3px solid #fff;
+        border-radius: 35px;
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    &__button:hover {
+        background-color: #fff;
+        color: #d22856;
+    }
+
+    &__button:active {
+        color: rgba(210, 40, 86, 0.3);
+    }
+
+    &__info {
+        margin: 10px 16px 30px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 40px;
+    align-items: baseline;
+
+    &__item {
+        margin: 10px auto;
+    }
+
+    &__item:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+}

@@ -1,0 +1,513 @@
+@media (min-width: 660px) {
+	.advs {
+		padding: 0;
+
+		&::before {
+			left: 155px;
+			min-width: 268px;
+			min-height: 480px;
+			background: url("../img/tablet/iphone-screen-3-tablet@1x.png") no-repeat;
+		}
+
+		&.webp::before {
+			background: url("../img/tablet/iphone-screen-3-tablet@1x.webp") no-repeat;
+		}
+
+		&__header {
+			padding: 45px 30px 55px;
+			font-size: 40px;
+			line-height: 50px;
+		}
+
+		&__header-text {
+			margin: 0;
+		}
+
+		&__header-text:nth-child(2) {
+			padding: 0 100px;
+		}
+
+		&__list {
+			position: relative;
+			min-width: 47%;
+			padding: 65px 20px 5px 330px;
+			text-align: left;
+		}
+	}
+
+	.research {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.reviews {
+		&__list {
+			flex-basis: 180px;
+		}
+
+		&__item {
+			flex-direction: column-reverse;
+		}
+
+		&__title {
+			order: 1;
+			font-size: 20px;
+			margin: 0;
+		}
+
+		&__job {
+			display: block;
+		}
+
+		&__text {
+			order: 2;
+			margin-bottom: 35px;
+			font-size: 18px;
+		}
+	}
+
+	.reviews-controls {
+		margin-top: 20px;
+	}
+
+	.price-list {
+		padding-top: 72px;
+		padding-bottom: 70px;
+	}
+
+	.price-table {
+		min-height: 225px;
+		margin-bottom: 0;
+
+		&__text {
+			display: none;
+		}
+
+		&__price {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&__hit::before {
+			left: -56px;
+			top: 4px;
+			font-size: 14px;
+			line-height: 28px;
+		}
+
+		tr td:first-child,
+		tr th:first-child {
+			display: table-cell;
+			padding: 8px 25px 8px 14px;
+		}
+
+		td svg {
+			display: block;
+			margin: 0 auto;
+			float: none;
+		}
+
+		td {
+			padding: 7px 20px;
+		}
+
+		th:not(:first-child) {
+			font-size: 16px;
+			padding: 10px 38px;
+		}
+
+		th:nth-child(3) {
+			padding: 12px 34px;
+		}
+	}
+
+	.price-controls {
+		display: none;
+	}
+
+	.contact-us {
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-bottom: 0;
+
+		&__slogan {
+			font-size: 40px;
+			line-height: 50px;
+			margin-bottom: 40px;
+		}
+
+		&__list {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__option {
+			width: 240px;
+			margin-bottom: 45px;
+		}
+
+		&__option:last-child {
+			margin: auto auto 35px;
+		}
+	}
+
+	.map {
+		min-height: 370px;
+		background-image: url("../img/tablet/bg-map-tablet@1x.jpg");
+	}
+
+	.map.webp {
+		background-image: url("../img/tablet/bg-map-tablet@1x.webp");
+	}
+
+	.main-page .page-footer,
+	.page-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: baseline;
+		padding: 35px 20px 40px;
+
+		&__logo {
+			margin-bottom: 0;
+			padding-bottom: 10px;
+		}
+
+		&__copyright {
+			margin-bottom: 0;
+		}
+
+		&__svg-mobile {
+			display: none;
+		}
+
+		&__svg-desktop {
+			display: block;
+		}
+	}
+
+	.social-list {
+		flex-basis: 189px;
+		margin-top: 6px;
+		margin-bottom: 0;
+		margin-right: 16px;
+	}
+}
+// ---------------   form-page    ------------- //
+@media (min-width: 660px) {
+	.review-section {
+		&__legend {
+			padding: 92px 50px 72px;
+			font-size: 18px;
+		}
+
+		&__legend--desktop {
+			display: block;
+		}
+	}
+
+	.form {
+		&__fieldset {
+			margin: 0 20px 55px;
+		}
+
+		&__fieldset legend {
+			display: block;
+			position: static;
+			transform: none;
+			padding: 0 30px;
+		}
+
+		&__fieldset:not(&__fieldset--info) {
+			border: 2px solid #e5e5e5;
+			background-color: #fff;
+			padding: 45px 60px 15px;
+		}
+
+		&__fieldset:not(&__fieldset--info) label {
+			padding-left: 57px;
+		}
+
+		&__fieldset--info {
+			padding: 0;
+			margin: 0 20px 5px;
+		}
+
+		&__fieldset--info-wrapper {
+			display: flex;
+			margin-bottom: 35px;
+		}
+
+		&__fieldset--info &__label {
+			margin-top: 15px;
+			margin-right: 18px;
+			margin-left: 0;
+		}
+
+		&__fieldset--app,
+		&__fieldset--info {
+			order: -2;
+		}
+
+		&__fieldset&__fieldset--contact {
+			order: -1;
+			padding-top: 40px;
+			padding-left: 55px;
+			padding-bottom: 0;
+		}
+
+		&__fieldset--contact-wrapper {
+			display: flex;
+			flex-direction: column-reverse;
+			margin-bottom: 25px;
+		}
+
+		&__fieldset--contact &__fieldset--contact-wrapper input {
+			margin-bottom: 12px;
+			padding-right: 70px;
+		}
+
+		&__fieldset--contact &__fieldset--contact-wrapper label {
+			position: relative;
+			padding-left: 0;
+		}
+
+		&__fieldset--contact-wrapper &__label::before {
+			content: '';
+			position: absolute;
+			top: -72px;
+			right: 2px;
+			height: 58px;
+			width: 58px;
+			background-color: #e5e5e5;
+			background-image: url("../img/svg/icon-phone.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&__fieldset--contact-wrapper:nth-of-type(2) &__label::before {
+			background-image: url("../img/svg/icon-mail.svg");
+		}
+
+		&__fieldset--contact-wrapper:hover &__label::before {
+			background-size: 23px 23px;
+		}
+
+		&__fieldset--contact-wrapper:nth-of-type(2):hover &__label::before {
+			background-size: 23px 18px;
+		}
+
+		&__fieldset&__fieldset--achieve {
+			padding-bottom: 0;
+		}
+
+		&__fieldset&__fieldset--review {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			margin-bottom: 70px;
+		}
+
+		&__fieldset--review textarea {
+			padding: 15px 15px 25px;
+		}
+
+		&__button-wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__button {
+			padding: 15px 55px;
+			margin-bottom: 50px;
+		}
+
+		&__required {
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	.form-popup {
+		width: 70%;
+		padding-top: 0;
+
+		&__title {
+			font-size: 30px;
+			line-height: 40px;
+			margin: 40px 78px 0;
+		}
+
+		&__text {
+			font-size: 18px;
+			margin-left: 75px;
+			margin-right: 75px;
+		}
+
+		&__inner {
+			padding: 50px 82px 55px;
+		}
+
+		&__inner button {
+			margin: 0;
+		}
+
+		&--success {
+			top: 2270px;
+		}
+	}
+}
+// ---------------    photo-page     --------------- //
+@media (min-width: 660px) {
+	.gallery {
+		&__promo {
+			padding: 90px 55px 75px;
+			font-size: 18px;
+		}
+
+		&__item {
+			flex-basis: 300px;
+			flex-grow: 1;
+			min-height: 455px;
+		}
+
+		&__item:not(&__item--best):nth-of-type(2n+1) {
+			margin-right: 20px;
+		}
+
+		&__item--best {
+			padding-bottom: 30px;
+		}
+
+		&__item--best::before {
+			padding: 6px 20px;
+			top: 58px;
+		}
+
+		&__item--best img {
+			height: 511px;
+		}
+
+		&__item--best &__wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding-top: 24px;
+			padding-left: 27px;
+			padding-bottom: 15px;
+		}
+
+		&__item--best &__text {
+			margin-bottom: 8px;
+		}
+
+		&__item--best &__like {
+			margin-bottom: 0;
+		}
+
+		&__item--best &__like-btn::before {
+			right: 9px;
+			left: auto;
+		}
+
+		&__item--best &__like-btn--liked.gallery__like-btn::before {
+			top: 5px;
+			left: auto;
+			right: 7px;
+		}
+
+		&__wrapper {
+			padding-top: 24px;
+			padding-left: 27px;
+			padding-bottom: 15px;
+		}
+
+		&__like {
+			padding-right: 40px;
+			padding-left: 0;
+			margin-bottom: 20px;
+			margin-top: auto;
+		}
+
+		&__like-btn::before {
+			right: 32px;
+			left: auto;
+			top: 5px;
+		}
+
+		&__like-btn--liked.gallery__like-btn::before {
+			right: 30px;
+			left: auto;
+			top: 3px;
+		}
+
+		&__text {
+			order: 1;
+			margin-bottom: 0;
+		}
+	}
+
+	.post-photo {
+		&__promo {
+			margin: 45px 30px 70px;
+			font-size: 18px;
+		}
+	}
+
+	.add-edit {
+		display: flex;
+		padding-top: 55px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&__photo {
+			flex-shrink: 0;
+			flex-grow: 0.4;
+		}
+
+		&__form {
+			flex-grow: 1;
+			margin-left: 45px;
+		}
+
+		&__list {
+			flex-direction: column;
+			margin-top: 10px;
+			margin-bottom: 45px;
+			padding: 0;
+			border: none;
+		}
+
+		&__item {
+			min-width: 41.7vw;
+			display: flex;
+			margin-bottom: 25px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #dddfe0;
+		}
+
+		&__input {
+			display: block;
+			position: static;
+			background-color: #f2f2f2;
+			transform: none;
+			width: 70% !important;
+		}
+
+		&__icon {
+			width: 22px;
+			height: 22px;
+			margin-right: 35px;
+			fill: #d22856;
+		}
+
+		&__btn-block {
+			min-width: 41.7vw;
+			margin: auto auto 0;
+		}
+
+		&__btn {
+			padding: 16px 77px;
+			margin-bottom: 23px;
+		}
+	}
+}

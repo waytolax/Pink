@@ -1,0 +1,13 @@
+{
+  "name": "pink",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "description": ""
+}

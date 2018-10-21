@@ -1,0 +1,50 @@
+.page-header__background::before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    width: 228px;
+    height: 411px;
+    right: 251px;
+    top: 272px;
+    background-color: black;
+}
+
+.cv {
+    position: absolute;
+    width: 148px;
+    height: 411px;
+    right: 290px;
+    top: 212px;
+    font-size: 50%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform: perspective(300px) rotateX(25deg);
+
+    &::after {
+        position: absolute;
+        content: ' ';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 60%;
+        background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+        pointer-events: none;
+    }
+
+    &__content {
+        position: absolute;
+        top: 100%;
+        color: #ff6;
+        animation: scroll 100s linear 4s infinite;
+    }
+}
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -170%;
+    }
+}

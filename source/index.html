@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Приложение поднимающее настроение">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="stylesheet" href="css/first-style.min.css">
+    <link rel="stylesheet" href="css/main-style.min.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main-style.min.css"></noscript>
+    <!-- <link href="img/favicon.jpg" rel="icon" type="image/jpg"> -->
+    <title>Pink</title>
+</head>
+
+<body class="main-page">
+
+    <!-- SVG -->
+    <div style="display:none">
+        <include src="source/index-sprite.svg"></include>
+    </div>
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1 class="visually-hidden" tabindex="0">Приложение поднимающее настроение</h1>
+        <div class="page-header__logo-btn page-header__logo-btn--no-js">
+
+            <a href="#" aria-label="Логотип сайта Pink">
+                <svg class="page-header__logo page-header__logo--mobile" width="75" height="24"><use xlink:href="#icon-logo-pink-white-mobile"></use></svg>
+                <svg class="page-header__logo page-header__logo--tablet" width="146" height="40"><use xlink:href="#icon-logo-pink-white-tablet"></use></svg>
+            </a>
+
+            <button type="button" class="page-header__toggler" aria-label="Открыть или Закрыть Меню">
+                <svg class="page-header__toggler-svg--cross" width="25" height="24"><use xlink:href="#icon-menu-cross"></use></svg>
+                <svg class="page-header__toggler-svg--burger" width="50" height="24"><use xlink:href="#icon-menu-burger"></use></svg>
+            </button>
+
+        </div>
+
+        <nav class="main-nav">
+            <a href="#" aria-label="Логотип сайта Pink">
+                <svg class="page-header__logo page-header__logo--desktop" width="146" height="40"><use xlink:href="#icon-logo-pink-white-desktop"></use></svg>
+            </a>
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--active">Главная</a></li>
+                <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
+                <li class="main-nav__item"><a href="form.html" class="main-nav__link">Конкурс</a></li>
+                <li class="main-nav__item"><a href="https://github.com/waytolax" class="main-nav__link">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-header__background"></div>
+
+        <!-- <div class="cv">
+            <div class="cv__content">
+            	<pre>Text</pre>
+            </div>
+        </div> -->
+
+        <!-- App download -->
+        <section class="app-download">
+            <h2 class="visually-hidden">Скачать приложение</h2>
+            <p class="app-download__slogan">Взгляните на жизнь иначе!</p>
+            <a href="https://github.com/waytolax" target="_blank" class="app-download__button">Скачать приложение</a>
+            <ul class="app-download__list icon-list">
+                <li class="icon-list__item icon-list__item--apple"><a href="#" aria-label="скачать для Apple"><svg width="47" height="56"><use xlink:href="#logo-apple"></use></svg></a></li>
+                <li class="icon-list__item icon-list__item--android"><a href="#" aria-label="скачать для Android"><svg  width="43" height="47"><use xlink:href="#logo-android"></use></svg></a></li>
+                <li class="icon-list__item icon-list__item--windows"><a href="#" aria-label="скачать для Windows"><svg  width="44" height="41"><use xlink:href="#logo-microsoft"></use></svg></a></li>
+            </ul>
+            <p class="app-download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </section>
+
+    </header>
+
+    <main>
+        <!-- ADVANTAGES -->
+        <section class="advs">
+            <h2 class="visually-hidden" tabindex="0">Наши преимущества</h2>
+            <header class="advs__header">
+                <p class="advs__header-text">Устали от серости мегаполиса?</p>
+                <p class="advs__header-text">Нам есть, что вам предложить!</p>
+                <svg class="block-separator" height="32"><use xlink:href="#bg-triangle-white"></use></svg>
+            </header>
+            <ul class="advs__list">
+                <li class="advs__item" tabindex="0">
+                    <h3 class="advs__title">Поднимает настроение</h3>
+                    <p class="advs__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </li>
+                <li class="advs__item" tabindex="0">
+                    <h3 class="advs__title">Меняет мир вокруг</h3>
+                    <p class="advs__text"> Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                </li>
+                <li class="advs__item" tabindex="0">
+                    <h3 class="advs__title">Заводит новых друзей</h3>
+                    <p class="advs__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- research -->
+
+        <section class="research" tabindex="0">
+            <h2 class="research__title">
+                Эффект&nbsp;<br> на 24 часа!
+            </h2>
+            <p class="research__text">
+                Британские ученые провели исcледования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a class="research__more" href="#">
+                Узнать больше об исcледовании
+              </a>
+        </section>
+
+        <!-- reviews -->
+
+        <section class="reviews">
+            <h2 class="visually-hidden" tabindex="0">Отзывы</h2>
+            <svg  class="reviews__quotes" width="79" height="63"><use xlink:href="#icon-quotes"></use></svg>
+            <button type="button" class="reviews__btn reviews__btn--left reviews__btn--nojs" aria-label="Предыдущий отзыв"><svg  width="22" height="41"><use xlink:href="#icon-review-arrow-left"></use></svg></button>
+            <button type="button" class="reviews__btn reviews__btn--right reviews__btn--nojs"><svg  width="22" height="41" aria-label="Следующий отзыв"><use xlink:href="#icon-review-arrow-right"></use></svg></button>
+            <ul class="reviews__list" tabindex="0">
+                <li class="reviews__item" >
+                    <h3 class="reviews__title">Николай Петров</h3>
+                    <p class="reviews__job">25 лет, водитель трамвая</p>
+                    <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+                </li>
+                <li class="reviews__item" >
+                    <h3 class="reviews__title">Lorem ipsum.</h3>
+                    <p class="reviews__job">25 lor, Lorem ipsum.</p>
+                    <p class="reviews__text">&laquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, numquam? фотографии!&raquo;</p>
+                </li>
+                <li class="reviews__item" >
+                    <h3 class="reviews__title">Lorem ipsum.</h3>
+                    <p class="reviews__job">25 lor, Lorem ipsum.</p>
+                    <p class="reviews__text">&laquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. фотографии!&raquo;</p>
+                </li>
+            </ul>
+            <div class="controls controls--nojs reviews-controls">
+                <input class="controls__item reviews-controls__item" type="radio" name="reviews-controls" id="review-1" checked aria-label="Первый отзыв">
+                <label class="controls__item-label" for="review-1"></label>
+                <input class="controls__item reviews-controls__item" type="radio" name="reviews-controls" id="review-2" aria-label="Второй отзыв">
+                <label class="controls__item-label" for="review-2"></label>
+                <input class="controls__item reviews-controls__item" type="radio" name="reviews-controls" id="review-3" aria-label="Третий отзыв">
+                <label class="controls__item-label" for="review-3"></label>
+            </div>
+
+            <svg class="block-separator" height="32"><use xlink:href="#bg-triangle-white"></use></svg>
+        </section>
+
+        <!-- Price List -->
+        <section class="price-list">
+            <h2 class="visually-hidden" tabindex="0">Цены</h2>
+
+            <table class="price-table">
+                <tbody class="price-table__container">
+                    <tr>
+                        <th></th>
+                        <th>База<span class="price-table__price">1,99 USD</span></th>
+                        <th class="price-table__hit" tabindex="0" >Стандарт<span class="price-table__price" >3,99 USD</span></th>
+                        <th>Анлим<span class="price-table__price">9,99 USD</span></th>
+                </tr>
+                <tr>
+                    <td>Розовый фильтр</td>
+                    <td>
+                        <span class="price-table__text">Розовый фильтр</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                            </td>
+                        <td>
+                            <span class="price-table__text">Розовый фильтр</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                        </td>
+                        <td>
+                            <span class="price-table__text">Розовый фильтр</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Смайлики</td>
+                        <td>
+                            <span class="price-table__text">Смайлики</span>
+                            <svg class="price-table__no" width="28" height="28"><use xlink:href="#icon-no"></use></svg>
+                        </td>
+                        <td>
+                            <span class="price-table__text">Смайлики</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                        </td>
+                        <td>
+                            <span class="price-table__text">Смайлики</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Комментарии</td>
+                        <td>
+                            <span class="price-table__text">Комментарии</span>
+                            <svg class="price-table__no" width="28" height="28"><use xlink:href="#icon-no"></use></svg>
+                        </td>
+                        <td>
+                            <span class="price-table__text">Комментарии</span>
+                            <svg class="price-table__no" width="28" height="28"><use xlink:href="#icon-no"></use></svg>
+                        </td>
+                        <td>
+                            <span class="price-table__text">Комментарии</span>
+                            <svg class="price-table__yes" width="30" height="25"><use xlink:href="#icon-yes"></use></svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="controls controls--nojs price-controls">
+                <input class="controls__item price-controls__item" type="radio" name="price-controls" id="price-1">
+                <label class="controls__item-label" for="price-1"></label>
+                <input class="controls__item price-controls__item" type="radio" name="price-controls" id="price-2" checked>
+                <label class="controls__item-label" for="price-2"></label>
+                <input class="controls__item price-controls__item" type="radio" name="price-controls" id="price-3">
+                <label class="controls__item-label" for="price-3"></label>
+            </div>
+
+
+        </section>
+
+        <!-- Contact Us -->
+        <section class="contact-us">
+            <h2 class="visually-hidden" tabindex="0">Контакты</h2>
+
+            <p class="contact-us__slogan">Остались вопросы?<br> Свяжитесь с нами!</p>
+
+                <ul class="contact-us__list">
+                    <li class="contact-us__option">
+                        <b class="contact-us__title" tabindex="0">Звоните:</b>
+                        <span class="contact-us__text"><a href="tel:+7-812-555-66-66">+7 (812) 555-66-66</span>
+                    </li>
+                    <li class="contact-us__option">
+                        <b class="contact-us__title" tabindex="0">Пишите:</b>
+                        <span class="contact-us__text"><a class="contact-us__link" href="#">mail@htmlacademy.ru</a></span>
+                    </li>
+                    <li class="contact-us__option" tabindex="0">
+                        <b class="contact-us__title">Приезжайте в гости:</b>
+                        <span class="contact-us__text">ул, Большая Конюшенная, 19/8</span>
+                    </li>
+                </ul>
+
+                <svg class="block-separator--footer" height="35"><use xlink:href="#bg-triangle-white-footer"></use></svg>
+        </section>
+
+        <!-- Map -->
+        <section class="map" id="map">
+            <h2 class="visually-hidden">Наш адрес: ул. Большая Конюшенная, 19/8</h2>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+
+        <div class="page-footer__logo">
+            <a class="page-footer__link" href="#" aria-label="Логотип сайта Pink">
+                <svg class="page-footer__svg-mobile" width="146" height="40"><use xlink:href="#icon-logo-pink-blue-mobile"></use></svg>
+                <svg class="page-footer__svg-desktop" width="146" height="40"><use xlink:href="#icon-logo-pink-blue-desktop"></use></svg>
+            </a>
+        </div>
+
+        <ul class="page-footer__social social-list" tabindex="0" aria-label="Наши социальные сети">
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--twitter" href="https://twitter.com" aria-label="twitter">
+                  <svg width="19" height="14"><use xlink:href="#icon-logo-twitter"></use></svg>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="https://ru-ru.facebook.com" aria-label="facebook">
+                  <svg width="9" height="18"><use xlink:href="#icon-logo-facebook"></use></svg>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com" aria-label="youtube">
+                  <svg width="15" height="13"><use xlink:href="#icon-logo-youtube"></use></svg>
+                </a>
+            </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+            <b class="copyright__text" tabindex="0">
+                Разработано
+            </b>
+            <a class="copyright__link" aria-label="HTML Академия" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+                <svg width="27" height="34"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+            </a>
+        </div>
+    </footer>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-ie">
+        <button class="popup-ie__close-btn" type="button"><svg width="25" height="24"><use xlink:href="#icon-menu-cross"></use></svg></button>
+        <h2 class="popup-ie__title"><span>ВНИМАНИЕ!</span> Вы используете устаревший браузер.</h2>
+        <p class="popup-ie__text">Internet Explorer не способен корректно отображать большинство сайтов. Он не поддерживает многие современные технологии, не удовлетворяет требованиям безопасности, скорости и надежности. 12 января 2016 года корпорация Microsoft полностью прекратила поддержку Internet Explorer.</p>
+        <p class="popup-ie__text">Настоятельно рекомендуем Вам выбрать и установить любой из перечисленных ниже современных браузеров. Это бесплатно и займет всего несколько минут.</p>
+        <ul class="browser-list">
+            <li class="browser-list__item">
+                <h2 class="browser-list__title">Google Chrome</h2>
+                <p class="browser-list__text">Google Chrome — популярнейший современный веб-браузер. Отличается надежностью, быстротой, простотой и стабильностью.</p>
+                <a href="https://www.google.com/intl/ru_ALL/chrome/" class="browser-list__link" target="_blank">Скачать Google Chrome</a>
+            </li>
+            <li class="browser-list__item">
+                <h2 class="browser-list__title">Mozilla Firefox</h2>
+                <p class="browser-list__text">Mozilla Firefox — браузер нового поколения от Mozilla Foundation. Простой и лаконичный интерфейс позволяет освоить программу за несколько минут.</p>
+                <a href="https://www.mozilla.org/ru/firefox/new/" class="browser-list__link" target="_blank">Скачать Mozilla Firefox</a>
+            </li>
+            <li class="browser-list__item">
+                <h2 class="browser-list__title">Microsoft Edge</h2>
+                <p class="browser-list__text">Microsoft Edge — браузер от компании Microsoft, призванный заменить Internet Explorer.</p>
+                <a href="https://www.microsoft.com/ru-ru/windows/microsoft-edge" class="browser-list__link" target="_blank">Скачать Microsoft Edge</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+    var background = document.querySelector('.page-header__background');
+    var advs = document.querySelector('.advs');
+    var map = document.querySelector('.map');
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+    if (isChrome) {
+        background.classList.add('webp');
+        advs.classList.add('webp');
+        map.classList.add('webp');
+    }
+    </script>
+
+    <script async src="./js/toggler.min.js"></script>
+    <script src="./js/reviews-slider.min.js"></script>
+    <script src="./js/pricetable-slider.min.js"></script>
+    <script src="./js/popup-ie.min.js"></script>
+    <script async src="./js/map.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo7nbRM7ulYyRw6GbXPK4zpimYbddrBO0&callback=initMap"></script>
+</body>
+
+</html>

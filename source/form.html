@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Приложение поднимающее настроение">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="stylesheet" href="css/first-style.min.css">
+    <link rel="stylesheet" href="css/main-style.min.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="css/main-style.min.css"></noscript>
+    <!-- <link href="img/favicon.jpg" rel="icon" type="image/jpg"> -->
+    <title>Pink</title>
+</head>
+
+<body class="form-page">
+    <!-- SVG -->
+    <div style="display:none">
+        <include src="source/form-sprite.svg"></include>
+    </div>
+    <!-- HEADER -->
+    <header class="page-header">
+
+        <div class="page-header__logo-btn page-header__logo-btn--no-js">
+
+            <a href="index.html" aria-label="Логотип сайта Pink" class="page-header__link">
+                    <svg class="page-header__logo page-header__logo--mobile" width="75" height="24"><use xlink:href="#icon-logo-pink-white-mobile"></use></svg>
+                    <svg class="page-header__logo page-header__logo--tablet" width="146" height="40"><use xlink:href="#icon-logo-pink-white-tablet"></use></svg>
+                </a>
+
+            <button type="button" class="page-header__toggler" aria-label="Открыть или Закрыть Меню">
+                    <svg class="page-header__toggler-svg--cross" width="25" height="24"><use xlink:href="#icon-menu-cross"></use></svg>
+                    <svg class="page-header__toggler-svg--burger" width="50" height="24"><use xlink:href="#icon-menu-burger"></use></svg>
+                </button>
+
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" aria-label="Логотип сайта Pink">
+                <svg class="page-header__logo page-header__logo--desktop" width="146" height="40"><use xlink:href="#icon-logo-pink-white-desktop"></use></svg>
+            </a>
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+                <li class="main-nav__item"><a href="photo.html" class="main-nav__link">Фотографии</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link main-nav__link--active">Конкурс</a></li>
+                <li class="main-nav__item"><a href="https://github.com/waytolax" class="main-nav__link">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-header__background"></div>
+
+    </header>
+
+    <main class="review-section">
+        <h1 class="visually-hidden" tabindex="0">Форма для участия в конкурсе</h1>
+        <p class="review-section__legend" tabindex="0">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="review-section__legend--desktop">Пожалуйста, заполните форму ниже:</span></p>
+        <form action="#" class="form">
+
+            <fieldset class="form__fieldset form__fieldset--info">
+                <div class="form__fieldset--info-wrapper">
+                    <label for="last_name" class="form__label">фамилия:</label>
+                    <input class="form__input" type="text" id="last_name" placeholder="Укажите фамилию *" name="last-name" required>
+                </div>
+                    <div class="form__fieldset--info-wrapper">
+                        <label for="first_name" class="form__label">имя:</label>
+                        <input class="form__input" type="text" id="first_name" placeholder="Введите ваше имя *" required>
+                </div>
+                        <div class="form__fieldset--info-wrapper">
+                            <label for="middle_name" class="form__label">отчество:</label>
+                            <input class="form__input" type="text" id="middle_name" placeholder="Ну и отчество тоже">
+                </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--achieve">
+                <legend class="form__legend" tabindex="0">Ваши безбашенные
+                    достижения в путешествии</legend>
+                <div class="form__inner">
+                    <input type="checkbox" id="achieve-selfi" checked>
+                    <label for="achieve-selfi" class="form__label">Сделал селфи с акулой</label>
+                    <input type="checkbox" id="achieve-beach" checked>
+                    <label for="achieve-beach" class="form__label">Обгорел на пляже</label>
+                    <input type="checkbox" id="achieve-chuck">
+                    <label for="achieve-chuck" class="form__label">Видел Чака Норриса</label>
+                    <input type="checkbox" id="achieve-souvenir">
+                    <label for="achieve-souvenir" class="form__label">Накупил сувениров</label>
+                    <input type="checkbox" id="achieve-tower" checked>
+                    <label for="achieve-tower" class="form__label">Удержал башню</label>
+                    <input type="checkbox" id="achieve-destroy">
+                    <label for="achieve-destroy" class="form__label">Разгромил отель</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--contact">
+                <legend class="form__legend">Контактная информация</legend>
+                <div class="form__inner">
+                    <div class="form__fieldset--contact-wrapper">
+                        <label for="phone-number" class="form__label">Номер телефона</label>
+                        <input class="form__input" type="tel" id="phone-number" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}">
+                    </div>
+                        <div class="form__fieldset--contact-wrapper">
+                            <label for="email-adress" class="form__label">адрес почты</label>
+                            <input class="form__input" type="email" id="email-adress" placeholder="Введите почту *" required>
+                    </div>
+                        </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--app">
+                <legend class="form__legend" tabindex="0">С каким приложением путешествовали?</legend>
+                <div class="form__inner">
+                    <input type="radio" name="app" id="app-ios" checked>
+                    <label for="app-ios" class="form__label">Pink для iOS</label>
+                    <input type="radio" name="app" id="app-android">
+                    <label for="app-android" class="form__label">Pink на Android</label>
+                    <input type="radio" name="app" id="app-win">
+                    <label for="app-win" class="form__label">Windows Phone</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--review">
+                <legend class="form__legend" tabindex="0">Опишите свои эмоции</legend>
+                <textarea rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <div class="form__button-wrapper">
+                <button class="form__button form__button--submit" type="submit" name="button">Отправить форму</button>
+                <p class="form__required" tabindex="0"><sup>*</sup> — обязательные поля</p>
+            </div>
+        </form>
+
+        <div class="form-popup form-popup--success">
+            <h2 class="form-popup__title" tabindex="0">Ваша заявка отправлена</h2>
+            <p class="form-popup__text" tabindex="0">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и
+                оповестим вас.</p>
+            <div class="form-popup__inner">
+                <button type="button" class="form__button form__button--close">ЗАКРЫТЬ ОКНО</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+
+        <div class="page-footer__logo">
+            <a class="page-footer__link" href="index.html" aria-label="Логотип сайта Pink">
+                <svg class="page-footer__svg-mobile" width="146" height="40"><use xlink:href="#icon-logo-pink-blue-mobile"></use></svg>
+                <svg class="page-footer__svg-desktop" width="146" height="40"><use xlink:href="#icon-logo-pink-blue-desktop"></use></svg>
+            </a>
+        </div>
+
+        <ul class="page-footer__social social-list" aria-label="Наши социальные сети" tabindex="0">
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--twitter" href="https://twitter.com" aria-label="twitter">
+                  <svg width="19" height="14"><use xlink:href="#icon-logo-twitter"></use></svg>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="https://ru-ru.facebook.com" aria-label="facebook">
+                  <svg width="9" height="18"><use xlink:href="#icon-logo-facebook"></use></svg>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com" aria-label="youtube">
+                  <svg width="15" height="13"><use xlink:href="#icon-logo-youtube"></use></svg>
+                </a>
+            </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+            <b class="copyright__text" tabindex="0">
+                Разработано
+            </b>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="HTML Академия">
+                <svg width="27" height="34"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+            </a>
+        </div>
+
+    </footer>
+
+    <script>
+    var background = document.querySelector('.page-header__background');
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+    if (isChrome) {
+        background.classList.add('webp');
+    }
+    </script>
+    <script async src="./js/toggler.min.js"></script>
+    <script async src="./js/popups.min.js"></script>
+</body>
+
+</html>
