@@ -1,4 +1,4 @@
-"# Pink"
+# Layout 'Pink'
 
 1) Mobile first
 2) Pixel Perfect
